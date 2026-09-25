@@ -1,0 +1,99 @@
+name: Publish frozen release rerun evidence
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/release-evidence.yml"
+
+permissions:
+  contents: write
+
+env:
+  FREEZE_TAG: scientific-freeze-v1.0-5ede3f9c6bf4
+
+jobs:
+  rerun:
+    name: Exact release tag · Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [18, 20, 22]
+
+    steps:
+      - name: Checkout exact Scientific Freeze tag
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.FREEZE_TAG }}
+
+      - name: Verify frozen file hashes
+        run: sha256sum -c SHA256SUMS.txt
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Run frozen portable benchmark
+        run: |
+          node portable-runner.js \
+            "GITHUB-ACTIONS-NODE-${{ matrix.node }}" \
+            "github-hosted-ubuntu"
+          report="$(ls -1t tahkik-external-rerun-report-*.json | head -n 1)"
+          mv "$report" "evidence-node-${{ matrix.node }}.json"
+
+      - name: Upload per-version evidence artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tahkik-release-evidence-node-${{ matrix.node }}
+          path: evidence-node-${{ matrix.node }}.json
+          if-no-files-found: error
+          retention-days: 90
+
+  publish:
+    name: Attach evidence permanently to GitHub Release
+    needs: rerun
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download all rerun evidence
+        uses: actions/download-artifact@v4
+        with:
+          pattern: tahkik-release-evidence-node-*
+          merge-multiple: true
+
+      - name: Build evidence integrity manifest
+        run: |
+          sha256sum evidence-node-18.json evidence-node-20.json evidence-node-22.json \
+            > GITHUB-ACTIONS-EVIDENCE-SHA256SUMS.txt
+
+          cat > GITHUB-ACTIONS-EVIDENCE.txt <<EOF
+          TAHKIK AI Scientific Freeze v1.0
+          Source tag: ${FREEZE_TAG}
+          GitHub Actions run ID: ${GITHUB_RUN_ID}
+          GitHub Actions run attempt: ${GITHUB_RUN_ATTEMPT}
+          Environment: GitHub-hosted ubuntu-latest
+          Node.js versions: 18, 20, 22
+          Frozen file verification: SHA256SUMS.txt checked before each rerun
+          Scope: clean cloud reproducibility rerun
+          Limitation: this is not independent third-party replication or a blind/secret external test.
+          EOF
+
+          cat GITHUB-ACTIONS-EVIDENCE-SHA256SUMS.txt
+          cat GITHUB-ACTIONS-EVIDENCE.txt
+
+      - name: Attach evidence files to Scientific Freeze release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload "$FREEZE_TAG" \
+            evidence-node-18.json \
+            evidence-node-20.json \
+            evidence-node-22.json \
+            GITHUB-ACTIONS-EVIDENCE-SHA256SUMS.txt \
+            GITHUB-ACTIONS-EVIDENCE.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
