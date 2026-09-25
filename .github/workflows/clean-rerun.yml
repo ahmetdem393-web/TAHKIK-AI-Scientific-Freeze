@@ -1,0 +1,50 @@
+name: Clean reproducibility rerun
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    tags:
+      - "scientific-freeze-v1.0-*"
+
+permissions:
+  contents: read
+
+jobs:
+  rerun:
+    name: Node ${{ matrix.node }} clean rerun
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [18, 20, 22]
+
+    steps:
+      - name: Checkout frozen repository
+        uses: actions/checkout@v4
+
+      - name: Verify frozen file hashes
+        run: sha256sum -c SHA256SUMS.txt
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Run portable deterministic benchmark
+        run: node portable-runner.js "GITHUB-ACTIONS-NODE-${{ matrix.node }}" "github-hosted-ubuntu"
+
+      - name: Show generated report
+        run: |
+          ls -l tahkik-external-rerun-report-*.json
+          cat tahkik-external-rerun-report-*.json
+
+      - name: Upload rerun report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tahkik-clean-rerun-node-${{ matrix.node }}
+          path: tahkik-external-rerun-report-*.json
+          if-no-files-found: error
+          retention-days: 90
