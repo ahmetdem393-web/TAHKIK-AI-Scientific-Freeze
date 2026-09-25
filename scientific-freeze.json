@@ -1,0 +1,143 @@
+{
+  "freezeVersion": "TAHKIK-SCIENTIFIC-FREEZE-1.0",
+  "createdAt": "2026-09-24T18:02:25.437Z",
+  "sha256": "5ede3f9c6bf4f0555c18185cd19d35f8ed94b11c72e1988d56c127b197eb92ce",
+  "ledgerSequence": 47,
+  "ledgerEntryHash": "e91ce3170a68e9a8411cc372c9884c88082ac516ab03f4b64ae5bebe333a524a",
+  "manifest": {
+    "purpose": "Immutable scientific handoff manifest anchoring the current evidence state, frozen rerun artifacts, trusted signing key, and explicit claim ceiling.",
+    "benchmark": {
+      "id": "8",
+      "complete": true,
+      "passRate": 100,
+      "totalCases": 64,
+      "failedCases": 0,
+      "passedCases": 64,
+      "suiteVersion": "TAHKIK-BENCH-0.3",
+      "unsafeHandledCount": 0
+    },
+    "createdAt": "2026-09-24T18:02:25.435Z",
+    "freezeVersion": "TAHKIK-SCIENTIFIC-FREEZE-1.0",
+    "portableRunner": {
+      "id": "7",
+      "filename": "tahkik-portable-runner-tahkik-bench-0.3-9ff3286d1ee3.js",
+      "manifest": {
+        "format": "node-js-single-file",
+        "categories": [
+          "adversarial_numeric",
+          "adversarial_repeatability",
+          "adversarial_two_group",
+          "ambiguity_safety",
+          "basic_stats",
+          "boundary",
+          "numeric_stress",
+          "paired_stats",
+          "paired_stress",
+          "parser_safety",
+          "ratio",
+          "ratio_stress",
+          "repeatability",
+          "repeatability_safety",
+          "two_group",
+          "two_group_stress"
+        ],
+        "totalCases": 64,
+        "failedCases": 0,
+        "passedCases": 64,
+        "fixtureSha256": "97398b538a4bb9bc3ed34f8b42d7eb7659ae49fb32e3b07555622963b9c53e9c",
+        "unsafeHandledCount": 0
+      },
+      "engineSha256": "d29b8d6f9e90c8f1676f606621e2a55bd8a1315b0bb89a873671ae1b1d447e62",
+      "runnerSha256": "9ff3286d1ee31138ca566b5c78e41c263b02ac45e5c26854c3d881f4e96a0e79",
+      "suiteVersion": "TAHKIK-BENCH-0.3",
+      "runnerVersion": "TAHKIK-PORTABLE-0.1"
+    },
+    "evidenceCeiling": {
+      "confirmed": [
+        "Frozen deterministic benchmark reference run passes all cases with zero unsafe-handled cases.",
+        "Signed operator-local external ledger rerun is verified and matches an ACTIVE trusted key with prior possession proof."
+      ],
+      "nextRequirement": "Give the frozen rerun pack and portable runner to an unaffiliated third party; require execution in their own environment and return of the generated external rerun report without modifying fixtures.",
+      "notYetConfirmed": [
+        "Independent third-party replication of the frozen benchmark.",
+        "Blind or organizer-held secret external test.",
+        "Independent legal or real-world identity verification of the signing actor."
+      ]
+    },
+    "frozenRerunPack": {
+      "id": "4",
+      "sha256": "458d99c39c0f50185ff54ab24aaee80081ab77b6d35f7040e4755bca81444a4c",
+      "filename": "tahkik-rerun-tahkik-bench-0.3-458d99c39c0f.json",
+      "manifest": {
+        "passRate": 100,
+        "categories": [
+          "adversarial_numeric",
+          "adversarial_repeatability",
+          "adversarial_two_group",
+          "ambiguity_safety",
+          "basic_stats",
+          "boundary",
+          "numeric_stress",
+          "paired_stats",
+          "paired_stress",
+          "parser_safety",
+          "ratio",
+          "ratio_stress",
+          "repeatability",
+          "repeatability_safety",
+          "two_group",
+          "two_group_stress"
+        ],
+        "totalCases": 64,
+        "failedCases": 0,
+        "passedCases": 64,
+        "fixtureSha256": "97398b538a4bb9bc3ed34f8b42d7eb7659ae49fb32e3b07555622963b9c53e9c",
+        "unsafeHandledCount": 0
+      },
+      "coreVersion": "TAHKIK-DET-0.1",
+      "packVersion": "TAHKIK-RERUN-0.1",
+      "suiteVersion": "TAHKIK-BENCH-0.3"
+    },
+    "preFreezeLedger": {
+      "valid": true,
+      "sequence": 46,
+      "entryCount": 46,
+      "headSha256": "6afc39ec061c84d669f552511f0e3ba2228bfc04737248d4efbeacf347b2e92d"
+    },
+    "protocolVersion": "TAHKIK-1.0",
+    "trustedSigningKey": {
+      "id": "2",
+      "status": "ACTIVE",
+      "trustBasis": "OPERATOR_REGISTERED",
+      "organization": "",
+      "actorNameOrId": "ATD",
+      "fingerprintSha256": "521369ca49f5fd7f3f5efb27db7127025517693e7fd14afc62172387d1bc744f",
+      "possessionProofEventId": "3"
+    },
+    "latestExternalBenchmarkRerun": {
+      "reportId": "4",
+      "totalCases": 64,
+      "passedCases": 64,
+      "engineSha256": "d29b8d6f9e90c8f1676f606621e2a55bd8a1315b0bb89a873671ae1b1d447e62",
+      "organization": "",
+      "reportSha256": "6df12246d0da685dacc2c128034b2b40aa82b425ef1d85a75c6cd49846168df6",
+      "actorNameOrId": "",
+      "fixtureSha256": "97398b538a4bb9bc3ed34f8b42d7eb7659ae49fb32e3b07555622963b9c53e9c",
+      "independenceStatus": "UNVERIFIED",
+      "verificationStatus": "VERIFIED"
+    },
+    "signedOperatorLocalLedgerRerun": {
+      "reportId": "14",
+      "reportSha256": "9196b02a40c0ead40a8e9548bad992563a2f1f5b06a31cb4dfe0264643864217",
+      "runnerSha256": "962c201b3425697700d4aada49df14a22dd6a30e28ff48fe99f842ce581f27e3",
+      "actorNameOrId": "ATD",
+      "signatureValid": true,
+      "snapshotSha256": "6dcc23e5efdfc1e9cd2438fab8d04e2f41e855a9a82215b1b73f77e118d3c6a9",
+      "sourceHeadHash": "0b688bd45a48aa17b18eced321615c2f549ec45e74d475006f1e11444b0c12fd",
+      "provenanceStatus": "SIGNED_SELF_ATTESTED_EXTERNAL",
+      "keyRegistryStatus": "ACTIVE_KEY_MATCH",
+      "sourceLastSequence": 42,
+      "verificationStatus": "VERIFIED"
+    }
+  }
+}

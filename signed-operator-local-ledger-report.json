@@ -1,0 +1,36 @@
+{
+  "valid": true,
+  "caveat": "This snapshot can verify internal hash-chain consistency offline. It is not an external timestamp authority, immutable public ledger, or proof that pre-v0.19 backfilled artifacts were unchanged before ledger activation.",
+  "breakAt": null,
+  "signature": {
+    "algorithm": "Ed25519",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAsss+hQDhGL//VerDWBtH+xM0HE/ioOJs56RVnO+lxUI=\n-----END PUBLIC KEY-----\n",
+    "payloadSha256": "de0a493d3aae79a424d30e408dd78e87615fd795dc9f9b0634c74e743ca0cb51",
+    "signatureBase64": "GOHvpYeo9boIkPfS7vszhUbwIJ/DMUYVYOtzYRPKy6dtzvPn2BKkeZDNQdpvH66aVqwXwfOzRFNA1n5X37wQDA==",
+    "keyFingerprintSha256": "521369ca49f5fd7f3f5efb27db7127025517693e7fd14afc62172387d1bc744f"
+  },
+  "entryCount": 42,
+  "verifiedAt": "2026-09-24T17:22:59.612Z",
+  "declaration": "I attest that this verification was executed in an environment controlled by the named external actor and that the Portable Ledger file was not intentionally modified before execution.",
+  "environment": {
+    "arch": "arm64",
+    "node": "v26.3.1",
+    "osType": "Linux",
+    "platform": "android",
+    "timezone": "Europe/Berlin",
+    "osRelease": "6.1.145-android14-11-gfa1d6308d1fe-ab14691759"
+  },
+  "headMatches": true,
+  "countMatches": true,
+  "organization": "",
+  "runnerSha256": "962c201b3425697700d4aada49df14a22dd6a30e28ff48fe99f842ce581f27e3",
+  "actorNameOrId": "ATD",
+  "exportVersion": "TAHKIK-LEDGER-PORTABLE-0.3",
+  "ledgerVersion": "TAHKIK-LEDGER-0.1",
+  "reportVersion": "TAHKIK-LEDGER-VERIFY-REPORT-0.3",
+  "snapshotSha256": "6dcc23e5efdfc1e9cd2438fab8d04e2f41e855a9a82215b1b73f77e118d3c6a9",
+  "sourceHeadHash": "0b688bd45a48aa17b18eced321615c2f549ec45e74d475006f1e11444b0c12fd",
+  "snapshotHashNow": "6dcc23e5efdfc1e9cd2438fab8d04e2f41e855a9a82215b1b73f77e118d3c6a9",
+  "snapshotMatches": true,
+  "sourceLastSequence": 42
+}

@@ -1,0 +1,963 @@
+{
+  "rerun": {
+    "purpose": "Frozen handoff package for a third party to rerun the deterministic TAHKIK benchmark in an environment controlled by that third party.",
+    "generatedAt": "2026-09-24T18:02:24.631Z",
+    "packVersion": "TAHKIK-RERUN-0.1",
+    "suiteVersion": "TAHKIK-BENCH-0.3",
+    "protocolVersion": "TAHKIK-1.0",
+    "deterministicCoreVersion": "TAHKIK-DET-0.1"
+  },
+  "integrity": {
+    "sha256": "458d99c39c0f50185ff54ab24aaee80081ab77b6d35f7040e4755bca81444a4c",
+    "coverage": "Canonical JSON payload excluding the final package sha256 field; object keys are sorted recursively.",
+    "algorithm": "SHA-256"
+  },
+  "limitations": [
+    "Creating or exporting this package does not itself constitute independent replication.",
+    "A successful third-party rerun establishes reproducibility of the frozen deterministic benchmark, not truth of unrelated scientific claims.",
+    "Because expected labels are included, this package is not a blind or secret external test.",
+    "Blind external confirmation requires organizer-held unseen cases or genuinely new independent data."
+  ],
+  "referenceRun": {
+    "cases": [
+      {
+        "id": "stats-mean-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "basic_stats",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "stats-median-reject",
+        "actual": "CONTRADICTED",
+        "passed": true,
+        "category": "basic_stats",
+        "expected": "CONTRADICTED"
+      },
+      {
+        "id": "stats-variance-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "basic_stats",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "stats-sample-std-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "basic_stats",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "stats-range-reject",
+        "actual": "CONTRADICTED",
+        "passed": true,
+        "category": "basic_stats",
+        "expected": "CONTRADICTED"
+      },
+      {
+        "id": "ratio-percent-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "ratio",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "ratio-reject",
+        "actual": "CONTRADICTED",
+        "passed": true,
+        "category": "ratio",
+        "expected": "CONTRADICTED"
+      },
+      {
+        "id": "ratio-change-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "ratio",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "paired-correlation-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "paired_stats",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "paired-slope-reject",
+        "actual": "CONTRADICTED",
+        "passed": true,
+        "category": "paired_stats",
+        "expected": "CONTRADICTED"
+      },
+      {
+        "id": "paired-intercept-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "paired_stats",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "paired-r2-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "paired_stats",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "repeat-abs-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "repeatability",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "repeat-abs-reject",
+        "actual": "CONTRADICTED",
+        "passed": true,
+        "category": "repeatability",
+        "expected": "CONTRADICTED"
+      },
+      {
+        "id": "repeat-mape-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "repeatability",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "repeat-csv-reject",
+        "actual": "CONTRADICTED",
+        "passed": true,
+        "category": "repeatability",
+        "expected": "CONTRADICTED"
+      },
+      {
+        "id": "group-diff-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "two_group",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "group-d-reject",
+        "actual": "CONTRADICTED",
+        "passed": true,
+        "category": "two_group",
+        "expected": "CONTRADICTED"
+      },
+      {
+        "id": "group-p-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "two_group",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "group-g-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "two_group",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "unsupported-qualitative",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "boundary",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "unsupported-code",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "boundary",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "unsupported-single-value",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "boundary",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "unsupported-zero-variance-groups",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "boundary",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-negative-mean-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "adversarial_numeric",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-decimal-median-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "adversarial_numeric",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-zero-denominator",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "adversarial_numeric",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-negative-change-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "adversarial_numeric",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-negative-correlation-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "adversarial_numeric",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-zero-variance-x",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "adversarial_numeric",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-repeat-mismatched-lengths",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "adversarial_repeatability",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-repeat-exact-zero-tolerance",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "adversarial_repeatability",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-two-group-unequal-n-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "adversarial_two_group",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-two-group-wrong-p",
+        "actual": "CONTRADICTED",
+        "passed": true,
+        "category": "adversarial_two_group",
+        "expected": "CONTRADICTED"
+      },
+      {
+        "id": "adv-nan-list",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "parser_safety",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-infinity-list",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "parser_safety",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-malformed-paired-token",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "parser_safety",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-malformed-repeat-csv-row",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "parser_safety",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-missing-claim-target",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "boundary",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-narrative-with-numbers",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "boundary",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-large-magnitude-mean-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "numeric_stress",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-duplicate-median-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "numeric_stress",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-multi-claim-one-wrong",
+        "actual": "CONTRADICTED",
+        "passed": true,
+        "category": "numeric_stress",
+        "expected": "CONTRADICTED"
+      },
+      {
+        "id": "adv-turkish-claim-mean-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "numeric_stress",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-negative-denominator-ratio-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "ratio_stress",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-small-denominator-ratio-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "ratio_stress",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-missing-denominator",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "ratio_stress",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-negative-old-change-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "ratio_stress",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-paired-affine-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "paired_stress",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-paired-length-mismatch",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "paired_stress",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-paired-zero-variance-y",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "paired_stress",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-repeat-negative-tolerance",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "repeatability_safety",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-repeat-zero-reference-percent",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "repeatability_safety",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-repeat-malformed-list",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "repeatability_safety",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-repeat-extra-column-csv-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "repeatability_safety",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-two-group-negative-diff-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "two_group_stress",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-two-group-small-n-pass",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "two_group_stress",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-two-group-malformed-token",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "two_group_stress",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-two-group-singleton",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "two_group_stress",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-duplicate-values-assignment",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "ambiguity_safety",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-duplicate-numerator-assignment",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "ambiguity_safety",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-duplicate-reference-assignment",
+        "actual": "NOT_HANDLED",
+        "passed": true,
+        "category": "ambiguity_safety",
+        "expected": "NOT_HANDLED"
+      },
+      {
+        "id": "adv-scientific-notation-list",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "numeric_stress",
+        "expected": "SUPPORTED"
+      },
+      {
+        "id": "adv-leading-decimal-list",
+        "actual": "SUPPORTED",
+        "passed": true,
+        "category": "numeric_stress",
+        "expected": "SUPPORTED"
+      }
+    ],
+    "passRate": 100,
+    "totalCases": 64,
+    "failedCases": 0,
+    "passedCases": 64,
+    "environmentClass": "TAHKIK development environment",
+    "unsafeHandledCount": 0
+  },
+  "frozenFixtures": [
+    {
+      "id": "stats-mean-pass",
+      "claim": "The mean is 3.",
+      "category": "basic_stats",
+      "expected": "SUPPORTED",
+      "material": "values = [1,2,3,4,5]\nclaimed_mean = 3"
+    },
+    {
+      "id": "stats-median-reject",
+      "claim": "The median is 9.",
+      "category": "basic_stats",
+      "expected": "CONTRADICTED",
+      "material": "values = [1,3,4,8,9]\nclaimed_median = 9"
+    },
+    {
+      "id": "stats-variance-pass",
+      "claim": "The population variance is two thirds.",
+      "category": "basic_stats",
+      "expected": "SUPPORTED",
+      "material": "values = [1,2,3]\nclaimed_variance = 0.6666666666666666"
+    },
+    {
+      "id": "stats-sample-std-pass",
+      "claim": "The sample standard deviation is 1.",
+      "category": "basic_stats",
+      "expected": "SUPPORTED",
+      "material": "values = [1,2,3]\nclaimed_sample_std = 1"
+    },
+    {
+      "id": "stats-range-reject",
+      "claim": "The range is 5.",
+      "category": "basic_stats",
+      "expected": "CONTRADICTED",
+      "material": "values = [2,4,8]\nclaimed_range = 5"
+    },
+    {
+      "id": "ratio-percent-pass",
+      "claim": "The percentage is 25.",
+      "category": "ratio",
+      "expected": "SUPPORTED",
+      "material": "numerator = 50\ndenominator = 200\nclaimed_percentage = 25"
+    },
+    {
+      "id": "ratio-reject",
+      "claim": "The ratio is 3.",
+      "category": "ratio",
+      "expected": "CONTRADICTED",
+      "material": "numerator = 10\ndenominator = 5\nclaimed_ratio = 3"
+    },
+    {
+      "id": "ratio-change-pass",
+      "claim": "The percentage change is 20.",
+      "category": "ratio",
+      "expected": "SUPPORTED",
+      "material": "old_value = 100\nnew_value = 120\nclaimed_percentage_change = 20"
+    },
+    {
+      "id": "paired-correlation-pass",
+      "claim": "The correlation is 1.",
+      "category": "paired_stats",
+      "expected": "SUPPORTED",
+      "material": "x = [1,2,3,4]\ny = [2,4,6,8]\nclaimed_correlation = 1"
+    },
+    {
+      "id": "paired-slope-reject",
+      "claim": "The slope is 3.",
+      "category": "paired_stats",
+      "expected": "CONTRADICTED",
+      "material": "x = [1,2,3,4]\ny = [2,4,6,8]\nclaimed_slope = 3"
+    },
+    {
+      "id": "paired-intercept-pass",
+      "claim": "The intercept is 1.",
+      "category": "paired_stats",
+      "expected": "SUPPORTED",
+      "material": "x = [1,2,3,4]\ny = [3,5,7,9]\nclaimed_intercept = 1"
+    },
+    {
+      "id": "paired-r2-pass",
+      "claim": "R squared is 1.",
+      "category": "paired_stats",
+      "expected": "SUPPORTED",
+      "material": "x = [1,2,3,4]\ny = [4,7,10,13]\nclaimed_r2 = 1"
+    },
+    {
+      "id": "repeat-abs-pass",
+      "claim": "The rerun is within tolerance.",
+      "category": "repeatability",
+      "expected": "SUPPORTED",
+      "material": "reference = [10,20,30]\nrerun = [10.2,19.8,30.1]\ntolerance = 0.25"
+    },
+    {
+      "id": "repeat-abs-reject",
+      "claim": "The rerun is within tolerance.",
+      "category": "repeatability",
+      "expected": "CONTRADICTED",
+      "material": "reference = [10,20,30]\nrerun = [10.6,19.8,30.1]\ntolerance = 0.25"
+    },
+    {
+      "id": "repeat-mape-pass",
+      "claim": "The MAPE is 1.",
+      "category": "repeatability",
+      "expected": "SUPPORTED",
+      "material": "reference = [100,200]\nrerun = [101,198]\nclaimed_mape = 1"
+    },
+    {
+      "id": "repeat-csv-reject",
+      "claim": "The rerun is within a 1 percent tolerance.",
+      "category": "repeatability",
+      "expected": "CONTRADICTED",
+      "material": "reference,rerun\n100,102\n200,202\n300,306\ntolerance_pct = 1"
+    },
+    {
+      "id": "group-diff-pass",
+      "claim": "The mean difference is 2.",
+      "category": "two_group",
+      "expected": "SUPPORTED",
+      "material": "group_a = [1,2,3,4,5]\ngroup_b = [3,4,5,6,7]\nclaimed_mean_difference = 2"
+    },
+    {
+      "id": "group-d-reject",
+      "claim": "Cohen's d is 2.",
+      "category": "two_group",
+      "expected": "CONTRADICTED",
+      "material": "group_a = [1,2,3,4,5]\ngroup_b = [3,4,5,6,7]\nclaimed_cohens_d = 2"
+    },
+    {
+      "id": "group-p-pass",
+      "claim": "The p value is approximately 0.08051623795721286.",
+      "category": "two_group",
+      "expected": "SUPPORTED",
+      "material": "group_a = [1,2,3,4,5]\ngroup_b = [3,4,5,6,7]\nclaimed_p_value = 0.08051623795721286"
+    },
+    {
+      "id": "group-g-pass",
+      "claim": "Hedges g matches the supplied value.",
+      "category": "two_group",
+      "expected": "SUPPORTED",
+      "material": "group_a = [1,2,3,4,5]\ngroup_b = [3,4,5,6,7]\nclaimed_hedges_g = 1.1425003159318015"
+    },
+    {
+      "id": "unsupported-qualitative",
+      "claim": "This treatment feels better.",
+      "category": "boundary",
+      "expected": "NOT_HANDLED",
+      "material": "Participants described mixed impressions."
+    },
+    {
+      "id": "unsupported-code",
+      "claim": "This code is memory safe.",
+      "category": "boundary",
+      "expected": "NOT_HANDLED",
+      "material": "function f(x) { return x + 1; }"
+    },
+    {
+      "id": "unsupported-single-value",
+      "claim": "The mean is 5.",
+      "category": "boundary",
+      "expected": "NOT_HANDLED",
+      "material": "values = [5]"
+    },
+    {
+      "id": "unsupported-zero-variance-groups",
+      "claim": "The group difference is significant.",
+      "category": "boundary",
+      "expected": "NOT_HANDLED",
+      "material": "group_a = [1,1,1]\ngroup_b = [2,2,2]"
+    },
+    {
+      "id": "adv-negative-mean-pass",
+      "claim": "The mean is 0.",
+      "category": "adversarial_numeric",
+      "expected": "SUPPORTED",
+      "material": "values = [-2,-1,0,1,2]\nclaimed_mean = 0"
+    },
+    {
+      "id": "adv-decimal-median-pass",
+      "claim": "The median is 0.25.",
+      "category": "adversarial_numeric",
+      "expected": "SUPPORTED",
+      "material": "values = [-1.5,0,0.5,4]\nclaimed_median = 0.25"
+    },
+    {
+      "id": "adv-zero-denominator",
+      "claim": "The ratio is 2.",
+      "category": "adversarial_numeric",
+      "expected": "NOT_HANDLED",
+      "material": "numerator = 10\ndenominator = 0\nclaimed_ratio = 2"
+    },
+    {
+      "id": "adv-negative-change-pass",
+      "claim": "The percentage change is -20.",
+      "category": "adversarial_numeric",
+      "expected": "SUPPORTED",
+      "material": "old_value = 100\nnew_value = 80\nclaimed_percentage_change = -20"
+    },
+    {
+      "id": "adv-negative-correlation-pass",
+      "claim": "The correlation is -1.",
+      "category": "adversarial_numeric",
+      "expected": "SUPPORTED",
+      "material": "x = [1,2,3,4]\ny = [8,6,4,2]\nclaimed_correlation = -1"
+    },
+    {
+      "id": "adv-zero-variance-x",
+      "claim": "The slope is 1.",
+      "category": "adversarial_numeric",
+      "expected": "NOT_HANDLED",
+      "material": "x = [2,2,2,2]\ny = [1,2,3,4]\nclaimed_slope = 1"
+    },
+    {
+      "id": "adv-repeat-mismatched-lengths",
+      "claim": "The rerun is reproducible.",
+      "category": "adversarial_repeatability",
+      "expected": "NOT_HANDLED",
+      "material": "reference = [1,2,3]\nrerun = [1,2]"
+    },
+    {
+      "id": "adv-repeat-exact-zero-tolerance",
+      "claim": "The rerun is within zero tolerance.",
+      "category": "adversarial_repeatability",
+      "expected": "SUPPORTED",
+      "material": "reference = [1,2,3]\nrerun = [1,2,3]\ntolerance = 0"
+    },
+    {
+      "id": "adv-two-group-unequal-n-pass",
+      "claim": "The mean difference is 3.",
+      "category": "adversarial_two_group",
+      "expected": "SUPPORTED",
+      "material": "group_a = [1,2,3]\ngroup_b = [3,4,5,6,7]\nclaimed_mean_difference = 3"
+    },
+    {
+      "id": "adv-two-group-wrong-p",
+      "claim": "The p value is 0.5.",
+      "category": "adversarial_two_group",
+      "expected": "CONTRADICTED",
+      "material": "group_a = [1,2,3,4,5]\ngroup_b = [3,4,5,6,7]\nclaimed_p_value = 0.5"
+    },
+    {
+      "id": "adv-nan-list",
+      "claim": "The mean is 2.",
+      "category": "parser_safety",
+      "expected": "NOT_HANDLED",
+      "material": "values = [1,NaN,3]\nclaimed_mean = 2"
+    },
+    {
+      "id": "adv-infinity-list",
+      "claim": "The mean is 2.",
+      "category": "parser_safety",
+      "expected": "NOT_HANDLED",
+      "material": "values = [1,Infinity,3]\nclaimed_mean = 2"
+    },
+    {
+      "id": "adv-malformed-paired-token",
+      "claim": "The correlation is 1.",
+      "category": "parser_safety",
+      "expected": "NOT_HANDLED",
+      "material": "x = [1,2,bad,4]\ny = [2,4,6,8]\nclaimed_correlation = 1"
+    },
+    {
+      "id": "adv-malformed-repeat-csv-row",
+      "claim": "The rerun is within tolerance.",
+      "category": "parser_safety",
+      "expected": "NOT_HANDLED",
+      "material": "reference,rerun\n10,10.1\nbad,20\n30,30.1\ntolerance = 0.2"
+    },
+    {
+      "id": "adv-missing-claim-target",
+      "claim": "These values are interesting.",
+      "category": "boundary",
+      "expected": "NOT_HANDLED",
+      "material": "values = [1,2,3,4]"
+    },
+    {
+      "id": "adv-narrative-with-numbers",
+      "claim": "The study mentions 3 groups.",
+      "category": "boundary",
+      "expected": "NOT_HANDLED",
+      "material": "There were 3 groups and 20 participants in total."
+    },
+    {
+      "id": "adv-large-magnitude-mean-pass",
+      "claim": "The mean is 1000000002.",
+      "category": "numeric_stress",
+      "expected": "SUPPORTED",
+      "material": "values = [1000000000,1000000002,1000000004]\nclaimed_mean = 1000000002"
+    },
+    {
+      "id": "adv-duplicate-median-pass",
+      "claim": "The median is 1.",
+      "category": "numeric_stress",
+      "expected": "SUPPORTED",
+      "material": "values = [1,1,1,9,9]\nclaimed_median = 1"
+    },
+    {
+      "id": "adv-multi-claim-one-wrong",
+      "claim": "The supplied summary statistics are correct.",
+      "category": "numeric_stress",
+      "expected": "CONTRADICTED",
+      "material": "values = [1,2,3]\nclaimed_mean = 2\nclaimed_sum = 7"
+    },
+    {
+      "id": "adv-turkish-claim-mean-pass",
+      "claim": "Ortalama 2.",
+      "category": "numeric_stress",
+      "expected": "SUPPORTED",
+      "material": "values = [1,2,3]"
+    },
+    {
+      "id": "adv-negative-denominator-ratio-pass",
+      "claim": "The ratio is -2.",
+      "category": "ratio_stress",
+      "expected": "SUPPORTED",
+      "material": "numerator = 10\ndenominator = -5\nclaimed_ratio = -2"
+    },
+    {
+      "id": "adv-small-denominator-ratio-pass",
+      "claim": "The ratio is 1000000.",
+      "category": "ratio_stress",
+      "expected": "SUPPORTED",
+      "material": "numerator = 1\ndenominator = 0.000001\nclaimed_ratio = 1000000"
+    },
+    {
+      "id": "adv-missing-denominator",
+      "claim": "The ratio is 5.",
+      "category": "ratio_stress",
+      "expected": "NOT_HANDLED",
+      "material": "numerator = 5\nclaimed_ratio = 5"
+    },
+    {
+      "id": "adv-negative-old-change-pass",
+      "claim": "The percentage change is 20.",
+      "category": "ratio_stress",
+      "expected": "SUPPORTED",
+      "material": "old_value = -100\nnew_value = -80\nclaimed_percentage_change = 20"
+    },
+    {
+      "id": "adv-paired-affine-pass",
+      "claim": "The linear relationship is reproduced.",
+      "category": "paired_stress",
+      "expected": "SUPPORTED",
+      "material": "x = [0,1,2,3]\ny = [1,3,5,7]\nclaimed_slope = 2\nclaimed_intercept = 1\nclaimed_r2 = 1"
+    },
+    {
+      "id": "adv-paired-length-mismatch",
+      "claim": "The slope is 2.",
+      "category": "paired_stress",
+      "expected": "NOT_HANDLED",
+      "material": "x = [1,2,3]\ny = [2,4]\nclaimed_slope = 2"
+    },
+    {
+      "id": "adv-paired-zero-variance-y",
+      "claim": "The correlation is 0.",
+      "category": "paired_stress",
+      "expected": "NOT_HANDLED",
+      "material": "x = [1,2,3]\ny = [4,4,4]\nclaimed_correlation = 0"
+    },
+    {
+      "id": "adv-repeat-negative-tolerance",
+      "claim": "The rerun is within tolerance.",
+      "category": "repeatability_safety",
+      "expected": "NOT_HANDLED",
+      "material": "reference = [1,2]\nrerun = [1,2]\ntolerance = -1"
+    },
+    {
+      "id": "adv-repeat-zero-reference-percent",
+      "claim": "The rerun is within zero percent tolerance.",
+      "category": "repeatability_safety",
+      "expected": "NOT_HANDLED",
+      "material": "reference = [0,100]\nrerun = [10,100]\ntolerance_pct = 0"
+    },
+    {
+      "id": "adv-repeat-malformed-list",
+      "claim": "The rerun is within tolerance.",
+      "category": "repeatability_safety",
+      "expected": "NOT_HANDLED",
+      "material": "reference = [1,2,bad]\nrerun = [1,2,3]\ntolerance = 0"
+    },
+    {
+      "id": "adv-repeat-extra-column-csv-pass",
+      "claim": "The rerun is within tolerance.",
+      "category": "repeatability_safety",
+      "expected": "SUPPORTED",
+      "material": "reference,rerun,note\n10,10.1,a\n20,19.9,b\n30,30.1,c\ntolerance = 0.2"
+    },
+    {
+      "id": "adv-two-group-negative-diff-pass",
+      "claim": "The mean difference is -3.",
+      "category": "two_group_stress",
+      "expected": "SUPPORTED",
+      "material": "group_a = [5,6,7]\ngroup_b = [2,3,4]\nclaimed_mean_difference = -3"
+    },
+    {
+      "id": "adv-two-group-small-n-pass",
+      "claim": "The mean difference is 1.",
+      "category": "two_group_stress",
+      "expected": "SUPPORTED",
+      "material": "group_a = [1,3]\ngroup_b = [2,4]\nclaimed_mean_difference = 1"
+    },
+    {
+      "id": "adv-two-group-malformed-token",
+      "claim": "The mean difference is 3.",
+      "category": "two_group_stress",
+      "expected": "NOT_HANDLED",
+      "material": "group_a = [1,2,bad]\ngroup_b = [3,4,5]\nclaimed_mean_difference = 3"
+    },
+    {
+      "id": "adv-two-group-singleton",
+      "claim": "The mean difference is 1.",
+      "category": "two_group_stress",
+      "expected": "NOT_HANDLED",
+      "material": "group_a = [1]\ngroup_b = [2,3]\nclaimed_mean_difference = 1"
+    },
+    {
+      "id": "adv-duplicate-values-assignment",
+      "claim": "The mean is 2.",
+      "category": "ambiguity_safety",
+      "expected": "NOT_HANDLED",
+      "material": "values = [1,2,3]\nvalues = [100,200,300]\nclaimed_mean = 2"
+    },
+    {
+      "id": "adv-duplicate-numerator-assignment",
+      "claim": "The ratio is 2.",
+      "category": "ambiguity_safety",
+      "expected": "NOT_HANDLED",
+      "material": "numerator = 10\nnumerator = 20\ndenominator = 5\nclaimed_ratio = 2"
+    },
+    {
+      "id": "adv-duplicate-reference-assignment",
+      "claim": "The rerun is within tolerance.",
+      "category": "ambiguity_safety",
+      "expected": "NOT_HANDLED",
+      "material": "reference = [1,2,3]\nreference = [4,5,6]\nrerun = [1,2,3]\ntolerance = 0"
+    },
+    {
+      "id": "adv-scientific-notation-list",
+      "claim": "The mean is 2000.",
+      "category": "numeric_stress",
+      "expected": "SUPPORTED",
+      "material": "values = [1e3,2e3,3e3]\nclaimed_mean = 2000"
+    },
+    {
+      "id": "adv-leading-decimal-list",
+      "claim": "The mean is 1.5.",
+      "category": "numeric_stress",
+      "expected": "SUPPORTED",
+      "material": "values = [.5,1.5,2.5]\nclaimed_mean = 1.5"
+    }
+  ],
+  "reportTemplate": {
+    "startedAt": "",
+    "deviations": [],
+    "finishedAt": "",
+    "environment": {
+      "notes": "",
+      "runtime": "",
+      "runtimeVersion": "",
+      "operatingSystem": ""
+    },
+    "organization": "",
+    "actorNameOrId": "",
+    "fixtureSha256": "97398b538a4bb9bc3ed34f8b42d7eb7659ae49fb32e3b07555622963b9c53e9c",
+    "packageSha256": "",
+    "resultSummary": {
+      "totalCases": 64,
+      "failedCases": null,
+      "passedCases": null,
+      "unsafeHandledCount": null
+    },
+    "independenceDeclaration": "I confirm that this rerun was executed in an environment controlled by the external actor and that the frozen fixtures were not modified."
+  },
+  "fixtureIntegrity": {
+    "sha256": "97398b538a4bb9bc3ed34f8b42d7eb7659ae49fb32e3b07555622963b9c53e9c",
+    "algorithm": "SHA-256",
+    "canonicalization": "Recursive object-key sorting; array order preserved."
+  },
+  "independenceProtocol": [
+    "Use a machine, account, and runtime controlled by the external rerun actor.",
+    "Do not edit fixture claims, materials, expected labels, or the reported package hashes.",
+    "Record operating system, runtime versions, start/end timestamps, and any deviations.",
+    "Compare rerun outputs case-by-case with the frozen expected labels and report every mismatch.",
+    "Return the completed report without changing the original package."
+  ]
+}
